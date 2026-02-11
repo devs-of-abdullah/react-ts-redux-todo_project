@@ -1,5 +1,4 @@
 import { IoIosRemoveCircleOutline } from "react-icons/io";
-import { FaEdit } from "react-icons/fa";
 import type { TodoType } from "../types/types";
 import { useDispatch } from "react-redux";
 import { removeTodoById } from "../redux/slices/todoSlice";
@@ -16,10 +15,10 @@ function Todo({ todoProps }: TodoProps) {
         }
   return (
     <div className="todo">
-      <div>{content}</div>
+      <div style={{marginLeft:"10px"}}>{content}</div>
       <div>
-        <IoIosRemoveCircleOutline onClick={handleRemoveTodo} className="icons" />
-        <FaEdit className="icons" style={{ marginRight: "8px" }} />
+        <IoIosRemoveCircleOutline onClick={handleRemoveTodo} className="icons" style={{marginRight:"10px"}} />
+        
       </div>
     </div>
   );
