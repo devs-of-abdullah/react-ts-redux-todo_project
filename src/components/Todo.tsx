@@ -1,21 +1,23 @@
 import { IoIosRemoveCircleOutline } from "react-icons/io";
-import { FaCheck } from "react-icons/fa";
 import { FaEdit } from "react-icons/fa";
+import type { TodoType } from "../types/types";
 
-function Todo() {
+interface TodoProps {
+  todoProps: TodoType;
+}
+
+function Todo({ todoProps }: TodoProps) {
+  const { id, content } = todoProps;
+
   return (
     <div className="todo">
-      <div>First todo</div>
+      <div>{content}</div>
       <div>
-        <IoIosRemoveCircleOutline
-          className="icons"
-         
-        />
+        <IoIosRemoveCircleOutline className="icons" />
         <FaEdit className="icons" style={{ marginRight: "8px" }} />
       </div>
     </div>
   );
-   
 }
 
 export default Todo;
